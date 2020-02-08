@@ -1,19 +1,21 @@
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(400, 500);
 }
 
 function draw() {
   background(220);
-printK(10,10);
-  printO(50,10);
+  printK(10,10);
+  printO(60,10);
   printR(140,10);
-  printE(190,10);
-  printA(240,10);
+  printE(200,10);
+  printA(250,10);
+
+
 }
 
 function printZ(x,y){
   line(x,y,x+40,y);
-  line(x+40,y,y,x+100);
+  line(x+40,y,x,y+100);
   line(x,y+100,x+40,y+100);
 }
 function printY(x,y){
@@ -23,7 +25,7 @@ function printY(x,y){
 }
 function printX(x,y){
   line(x, y, x+50, y+100);
-  line(x, y+100, y+50, x);
+  line(x, y+100, x+50, y);
 }
 function printW(x, y) {
   line(x, y, x + 10, y + 100);
@@ -38,7 +40,7 @@ function printV(x, y) {
 }
 
 function printU(x, y) {
-  line(x, y, x, x + 75);
+  line(x, y, x, y + 75);
   line(x + 40, y, x + 40, y + 75);
   noFill();
   arc(x + 20, y + 75, 40, 40, TWO_PI, PI);
@@ -69,7 +71,7 @@ function printQ(x, y) {
 }
 
 function printP(x, y) {
-  line(x, y, x, 100);
+  line(x, y, x, y+100);
   noFill();
   arc(x, y + 20, 60, 40, PI + HALF_PI, HALF_PI);
 }
@@ -151,7 +153,7 @@ function printG(x, y) {
   // arc(40, 50, 80, 100, TWO_PI, PI + HALF_PI);
   // line(40, 50, 80, 50);
 
-  arc(x + 40, y + 50, 80, 100, TWO_PI, PI + HALF_PI);
+  arc(x + 40, y + 50, 80, 100, TWO_PI , PI + HALF_PI+QUARTER_PI);
   line(x + 40, y + 50, x + 80, y + 50);
 }
 
@@ -185,14 +187,14 @@ function printD(x, y) {
   // arc(0, 50, 75, 100, PI + HALF_PI, HALF_PI);
 
   line(x, y, x, y + 100)
-  arc(x, y + 50, x + 75, y + 90, PI + HALF_PI, HALF_PI);
+  arc(x, y + 50, 75,100, PI + HALF_PI, HALF_PI);
 }
 
 
 function printC(x, y) {
   noFill();
   // arc(50, 50, 85, 100, HALF_PI, PI + HALF_PI);
-  arc(x + 50, y + 50, x + 85, y + 100, HALF_PI, PI + HALF_PI);
+  arc(x + 50, y + 50,85,100, HALF_PI, PI + HALF_PI);
 }
 
 function printB(x, y) {
@@ -204,8 +206,8 @@ function printB(x, y) {
 
   line(x, y, x, y + 100);
   noFill();
-  arc(x, y + 25, x + 50, y + 50, PI + HALF_PI, HALF_PI);
-  arc(x, y + 75, x + 50, y + 50, PI + HALF_PI, HALF_PI);
+  arc(x, y + 25,50,50, PI + HALF_PI, HALF_PI);
+  arc(x, y + 75,50,50, PI + HALF_PI, HALF_PI);
 
 }
 
